@@ -16,14 +16,14 @@ def wordle():
                 if char not in guessed:
                     guessed.append(char)
         joined = "".join(sorted(guessed))
-        answer = "".join(set(sorted(chosen_word)))
+        answer = "".join(sorted(set(chosen_word)))
         print(f"GUESSED: {joined}")
-        # print(f"ANSWER: {chosen_word}")
+        print(f"ANSWER: {answer}")
         
         if joined == answer:
             return print("WINNER!!!")
         else:
             counter += 1
-    return print("LOSERRRRRRRRRR!")
+    return print(f"WRONG! The answer is {chosen_word}")
 
 wordle()

@@ -9,8 +9,8 @@ def wordle():
     # print(f"The chosen word: {chosen_word}")
 
     while counter < 7:
-        while len(guess := input(f"Guess: ")) > 5:
-            print("TOO LONG")
+        while len(guess := input(f"Guess: ")) != 5:
+            print("Has to be 5 chars")
         for char in guess:
             if char in chosen_word:
                 if char not in guessed:
@@ -18,7 +18,7 @@ def wordle():
         joined = "".join(sorted(guessed))
         answer = "".join(sorted(set(chosen_word)))
         print(f"GUESSED: {joined}")
-        print(f"ANSWER: {answer}")
+        # print(f"ANSWER: {answer}")
         
         if joined == answer:
             return print("WINNER!!!")

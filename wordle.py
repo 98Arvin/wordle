@@ -16,7 +16,7 @@ def wordle():
                 if char not in guessed:
                     guessed.append(char)
         joined = "".join(sorted(guessed))
-        answer = "".join(sorted(chosen_word))
+        answer = "".join(set(sorted(chosen_word)))
         print(f"GUESSED: {joined}")
         # print(f"ANSWER: {chosen_word}")
         

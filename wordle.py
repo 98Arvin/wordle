@@ -7,24 +7,22 @@ def wordle():
     guessed = []
     start_time = time.time()
 
-    # print(f"The chosen word: {chosen_word}")
-
     print("=>= =================CONTAINDLE ================== =<=")
     print("=>= YOUR STINT MUST CONTAIN ALL THE LETTERS TO WIN =<=")
     print()
 
     while counter < 11:
-        
         while len(guess := input(f"→ ")) != 5:
             print("Has to be 5 chars")
         for char in guess:
             if char in chosen_word:
                 if char not in guessed:
                     guessed.append(char)
+
         joined = "".join(sorted(guessed))
         answer = "".join(sorted(set(chosen_word)))
+
         print(f"GUESS {counter}/10 → {joined.upper()}")
-        # print(f"ANSWER: {answer}")
         
         if joined == answer:
             end_time = time.time()
@@ -32,6 +30,7 @@ def wordle():
             return print(f">{chosen_word.upper()}< IS INDEED THE CORRECT WORD || YOU HAD {10 - counter} GUESS(ES) REMAINING || TIME USED: {elapsed_time:.2f} SECONDS")
         else:
             counter += 1
+            
     return print(f"WRONG! The answer is {chosen_word.upper()}")
 
 wordle()

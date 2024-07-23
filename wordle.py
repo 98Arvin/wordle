@@ -31,6 +31,6 @@ def wordle():
         else:
             counter += 1
             
-    return print(f"WRONG! The answer is {chosen_word.upper()}")
+    return print(f"WRONG ❌ The answer was {chosen_word.upper()}!")
 
 wordle()

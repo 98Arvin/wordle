@@ -1,7 +1,11 @@
 import random, time
 
+def import_words():
+    words = ["snake", "slave", "catch", "match", "binge", "blown", "black", "music", "dance", "query", "funny", "slash", "names", "users", "parts", "paths", "plank", "clark", "power", "flown", "clown", "shows", "shown", "sword", "grass", "grape", "petty", "lower", "sweet"]
+    return words
+
 def wordle():
-    random_words = ["snake", "slave", "catch", "match", "binge", "blown", "black", "music", "dance", "query", "funny", "slash", "names", "users", "parts", "paths", "plank", "clark", "power", "flown", "clown", "shows", "shown", "sword", "grass", "grape", "petty", "lower", "sweet"]
+    random_words = import_words()
     counter = 1
     chosen_word = random.choice(random_words)
     guessed = []
